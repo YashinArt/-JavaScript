@@ -1,8 +1,14 @@
-function makeMessage (name, price) {
+function makeOrderMessage(orderedQuantity, pricePerDroid, deliveryFee) {
     // Change code below this line
     
-     const message = `You picked ${name}, price per item is ${price} credits`;
+    const message = `You ordered droids worth ${orderedQuantity * pricePerDroid + deliveryFee} credits. Delivery (${deliveryFee} credits) is included in total price.`
+  
+  
     // Change code above this line
     return message;
-    
-  };
+  }
+  makeOrderMessage(2, 100, 50);
+
+  
+console.log(makeOrderMessage(2, 100, 50));
+  
