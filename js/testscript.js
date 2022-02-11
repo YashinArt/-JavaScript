@@ -1,14 +1,16 @@
-function makeOrderMessage(orderedQuantity, pricePerDroid, deliveryFee) {
+function formatMessage(message, maxLength) {
+    const minresult = message.length
+    let result = message.slice(maxLength, minresult);
     // Change code below this line
-    
-    const message = `You ordered droids worth ${orderedQuantity * pricePerDroid + deliveryFee} credits. Delivery (${deliveryFee} credits) is included in total price.`
+    if(minresult < maxLength){
+      result = message;
+    } else if(minresult > maxLength){
   
-  
-    // Change code above this line
-    return message;
+      result = message.replace(result, "...")
+    }
+    /// Change code above this line
+    return result;
   }
-  makeOrderMessage(2, 100, 50);
-
   
-console.log(makeOrderMessage(2, 100, 50));
+console.log(formatMessage("Curabitur ligula sapien", 10));
   
