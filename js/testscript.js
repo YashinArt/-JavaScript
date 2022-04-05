@@ -1933,11 +1933,38 @@
 // getTotalBalanceByGender(users, "female")
 
 
-const petya = {
-  username: "Petya",
-  showName() {
-    console.log(this);
+// const petya = {
+//   username: "Petya",
+//   showName() {
+//     console.log(this);
+//   },
+// };
+
+// petya.showName();
+
+// function foo() {
+//   console.log(this);
+// }
+
+// foo();
+
+const bookShelf = {
+  books: ["The Last Kingdom", "Dream Guardian"],
+  // Это метод объекта
+  getBooks() {
+    
+    console.log("Этот метод будет возвращать все книги - свойство books");
+  },
+  // Это метод объекта
+  addBook(bookName) {
+    this.books.push(bookName);
+
+    console.log("Этот метод будет добавлять новую книгу в свойство books");
   },
 };
 
-petya.showName();
+// Вызовы методов
+// bookShelf.getBooks();
+console.log(bookShelf.getBooks())
+// bookShelf.addBook("Новая книга");
+console.log(bookShelf.addBook("Новая книга"))
