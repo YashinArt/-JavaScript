@@ -1948,23 +1948,232 @@
 
 // foo();
 
-const bookShelf = {
-  books: ["The Last Kingdom", "Dream Guardian"],
-  // Это метод объекта
-  getBooks() {
+// const bookShelf = {
+//   books: ["The Last Kingdom", "Dream Guardian"],
+//   // Это метод объекта
+//   getBooks() {
+//     // console.log(this.books)
+//     return this.books;
+//     console.log("Этот метод будет возвращать все книги - свойство books");
+//   },
+//   // Это метод объекта
+//   addBook(bookName) {
+//     this.books.push(bookName);
+//     console.log(this.books)
+//     console.log("Этот метод будет добавлять новую книгу в свойство books");
+//   },
+//   // console.log(this.books)
+// };
+
+// // Вызовы методов
+// // bookShelf.getBooks();
+// console.log(bookShelf.getBooks())
+// // bookShelf.addBook("Новая книга");
+// console.log(bookShelf.addBook("The Las"))
+// console.log(bookShelf.addBook("Thfgdge Las"))
+// console.log(bookShelf.addBook("Thdfgdfgdfgdfe Las"))
+// console.log(bookShelf.addBook("Thdfgdfgdfgde Las"))
+
+
+// const products = [
+//   { name: "Radar", price: 1300, quantity: 4 },
+//   { name: "Scanner", price: 2700, quantity: 3 },
+//   { name: "Droid", price: 400, quantity: 7 },
+//   { name: "Grip", price: 1200, quantity: 9 },
+// ];
+
+// function getAllPropValues(propName) {
+//   // Change code below this line
+  
+// let a = [];
+// for (const product of products){
+//   // console.log(product);
+//   for (const p in product){
+//     // console.log(p);
+//     console.log(product[p]);
+//     console.log(propName);
+//     if (p === propName){
+//       a.push(product[propName]);
+//     }
+//   }
+//     // a.push(product[propName]);
+  
     
-    console.log("Этот метод будет возвращать все книги - свойство books");
-  },
-  // Это метод объекта
-  addBook(bookName) {
-    this.books.push(bookName);
+//   }
+  
+// // console.log(a);
+// return a;
+// }
 
-    console.log("Этот метод будет добавлять новую книгу в свойство books");
-  },
-};
+// getAllPropValues("name") 
+// возвращает ["Radar", "Scanner", "Droid", "Grip"]
+// getAllPropValues("quantity") 
+// возвращает [4, 3, 7, 9]
+// getAllPropValues("price") 
+// возвращает [1300, 2700, 400, 1200]
+// getAllPropValues("category") 
+// возвращает []
 
-// Вызовы методов
-// bookShelf.getBooks();
-console.log(bookShelf.getBooks())
-// bookShelf.addBook("Новая книга");
-console.log(bookShelf.addBook("Новая книга"))
+
+
+// const customer = {
+//   username: "Mango",
+//   balance: 24000,
+//   discount: 0.1,
+//   orders: ["Burger", "Pizza", "Salad"],
+//   // Change code below this line
+//   getBalance() {
+//     return this.balance;
+//   },
+//   getDiscount() {
+//     return this.discount;
+//   },
+//   setDiscount(value) {
+//     this.discount = value;
+//   },
+//   getOrders() {
+//     return this.orders;
+//   },
+//   addOrder(cost, order) {
+//     this.balance -= cost - cost * this.discount;
+//     this.orders.push(order);
+//   },
+//   // Change code above this line
+// };
+
+// customer.setDiscount(0.15);
+// console.log(customer.getDiscount()); // 0.15
+// customer.addOrder(5000, "Steak");
+// console.log(customer.getBalance()); // 19750
+// console.log(customer.getOrders()); // ["Burger", "Pizza", "Salad", "Steak"]
+
+
+// class Storage{
+//   constructor (items) {
+//     this.items = items
+//   }
+//   getItems(){
+//     return this.items
+//   }
+//   addItem(newItem){
+//     this.items.push(newItem);
+//   }
+//   removeItem(itemToRemove){
+//     this.items = this.items.filter((item) => item !== itemToRemove);
+//   }
+// }
+
+
+// // Change code above this line
+// const storage = new Storage(["Nanitoids", "Prolonger", "Antigravitator"]);
+// console.log(storage.getItems()); // ["Nanitoids", "Prolonger", "Antigravitator"]
+// storage.addItem("Droid");
+// console.log(storage.getItems()); // ["Nanitoids", "Prolonger", "Antigravitator", "Droid"]
+// storage.removeItem("Prolonger");
+// console.log(storage.getItems()); // ["Nanitoids", "Antigravitator", "Droid"]
+
+// class StringBuilder{
+//   constructor (value){
+//       this.value = value;
+//   }
+//   getValue(){
+//     return this.value;
+//   }
+//   padEnd(str){
+//     this.value += str;
+//   }
+//   padStart(str){
+//     this.value = str + this.value;
+//   }
+//   padBoth(str){
+//   this.value = str + this.value + str;
+  
+//   }
+// }
+
+
+// // Change code above this line
+// const builder = new StringBuilder(".");
+// console.log(builder.getValue()); // "."
+// builder.padEnd("^");
+// console.log(builder.getValue()); // "^."
+// builder.padStart("^");
+// console.log(builder.getValue()); // "^.^"
+// builder.padBoth("=");
+// console.log(builder.getValue()); // "=^.^="
+
+
+// class Car {
+//   static #MAX_PRICE = 50000;
+//   // Change code below this line
+//   static checkPrice(price){
+    
+//    return price > Car.#MAX_PRICE ? "Error! Price exceeds the maximum" : "Success! Price is within acceptable limits"
+//     // if (price > Car.#MAX_PRICE){
+//     //   return "Error! Price exceeds the maximum";
+//     // }
+//     // return "Success! Price is within acceptable limits"
+//   }
+//   // Change code above this line
+//   constructor({ price }) {
+//     this.price = price;
+//   }
+  
+// }
+
+// const audi = new Car({ price: 36000 });
+// const bmw = new Car({ price: 64000 });
+
+// console.log(Car.checkPrice(audi.price)); // "Success! Price is within acceptable limits"
+// console.log(Car.checkPrice(bmw.price)); // "Error! Price exceeds the maximum"
+
+
+// class User {
+//   email;
+
+//   constructor(email) {
+//     this.email = email;
+//   }
+
+//   get email() {
+//     return this.email;
+//   }
+
+//   set email(newEmail) {
+//     this.email = newEmail;
+//   }
+// }
+// class Admin extends User {
+//   // Change code below this line
+
+//   static AccessLevel = {
+//     BASIC: "basic",
+//     SUPERUSER: "superuser",
+//   };
+
+//   constructor({ email, accessLevel,blacklistedEmails = []  }) {
+//     super(email);
+//     this.accessLevel = accessLevel;
+//     this.blacklistedEmails = blacklistedEmails;
+//   }
+// blacklist(email){
+//   this.blacklistedEmails.push(email);
+// }
+// isBlacklisted(email){
+//   return this.blacklistedEmails.every(value => value === email);
+// }
+//   // Change code above this line
+// }
+
+// const mango = new Admin({
+//   email: "mango@mail.com",
+//   accessLevel: Admin.AccessLevel.SUPERUSER,
+// });
+
+// console.log(mango.email); // "mango@mail.com"
+// console.log(mango.accessLevel); // "superuser"
+
+// mango.blacklist("poly@mail.com");
+// console.log(mango.blacklistedEmails); // ["poly@mail.com"]
+// console.log(mango.isBlacklisted("mango@mail.com")); // false
+// console.log(mango.isBlacklisted("poly@mail.com")); // true
